@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://buymqdf2atssw"]
+[gd_scene load_steps=61 format=4 uid="uid://buymqdf2atssw"]
 
 [ext_resource type="Texture2D" uid="uid://duy3ls7avg3ix" path="res://assets/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="1_r5r7r"]
 [ext_resource type="Texture2D" uid="uid://b1e74qve6yluq" path="res://assets/environment/Tilesets/Floors_Tiles.png" id="1_tlh8c"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://duxwi5eioi5py" path="res://assets/environment/Tilesets/Water_tiles.png" id="14_kiigd"]
 [ext_resource type="Texture2D" uid="uid://cj4jwcxs2ikbd" path="res://assets/Cute_Fantasy_Free/Tiles/Beach_Tile.png" id="20_0agrg"]
 [ext_resource type="Script" uid="uid://dun21rd5hahsv" path="res://scripts/cenoura.gd" id="27_vxglm"]
+[ext_resource type="Script" uid="uid://dgyit30aheqsc" path="res://scenes/casa.gd" id="28_2f3dj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vl5r3"]
 texture = ExtResource("1_r5r7r")
@@ -2293,6 +2294,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f3dj"]
 size = Vector2(10, 12)
 
+[sub_resource type="LabelSettings" id="LabelSettings_vxglm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yq6so"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Layer 0" type="TileMapLayer" parent="."]
@@ -2308,7 +2313,7 @@ tile_map_data = PackedByteArray("AAAIAPr/AgAAAAAAAAALAAAAAwADAAAAAAAKAAAAAwACAAA
 tile_set = SubResource("TileSet_w4aw6")
 
 [node name="Layer 2" type="TileMapLayer" parent="Layer 0"]
-z_index = 1
+z_index = 2
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD8//T/BAACAAMAAAAFAPv/BQAAAAEAAAAFAPz/BQAAAAIAAAAFAP3/BQAAAAMAAAAGAPr/BQABAAAAAAAGAPv/BQABAAEAAAAGAPz/BQABAAIAAAAGAP3/BQABAAMAAAAGAP7/BQABAAQAAAAHAPr/BQACAAAAAAAHAPv/BQACAAEAAAAHAPz/BQACAAIAAAAHAP3/BQACAAMAAAAHAP7/BQACAAQAAAAIAPv/BQADAAEAAAAIAPz/BQADAAIAAAAIAP3/BQADAAMAAAD1/wAABQAAAAEAAAD1/wEABQAAAAIAAAD1/wIABQAAAAMAAAD2////BQABAAAAAAD2/wAABQABAAEAAAD2/wEABQABAAIAAAD2/wIABQABAAMAAAD2/wMABQABAAQAAAD3////BQACAAAAAAD3/wAABQACAAEAAAD3/wEABQACAAIAAAD3/wIABQACAAMAAAD3/wMABQACAAQAAAD4/wAABQADAAEAAAD4/wEABQADAAIAAAD4/wIABQADAAMAAAAIAPT/BQAAAAEAAAAIAPX/BQAAAAIAAAAIAPb/BQAAAAMAAAAJAPP/BQABAAAAAAAJAPT/BQABAAEAAAAJAPX/BQABAAIAAAAJAPb/BQABAAMAAAAJAPf/BQABAAQAAAAKAPP/BQACAAAAAAAKAPT/BQACAAEAAAAKAPX/BQACAAIAAAAKAPb/BQACAAMAAAAKAPf/BQACAAQAAAALAPT/BQADAAEAAAALAPX/BQADAAIAAAALAPb/BQADAAMAAAAAAAMABQAAAAEAAAAAAAQABQAAAAIAAAAAAAUABQAAAAMAAAABAAIABQABAAAAAAABAAMABQABAAEAAAABAAQABQABAAIAAAABAAUABQABAAMAAAABAAYABQABAAQAAAACAAIABQACAAAAAAACAAMABQACAAEAAAACAAQABQACAAIAAAACAAUABQACAAMAAAACAAYABQACAAQAAAADAAMABQADAAEAAAADAAQABQADAAIAAAADAAUABQADAAMAAADy/wUABQAAAAEAAADy/wYABQAAAAIAAADy/wcABQAAAAMAAADz/wQABQABAAAAAADz/wUABQABAAEAAADz/wYABQABAAIAAADz/wcABQABAAMAAADz/wgABQABAAQAAAD0/wQABQACAAAAAAD0/wUABQACAAEAAAD0/wYABQACAAIAAAD0/wcABQACAAMAAAD0/wgABQACAAQAAAD1/wUABQADAAEAAAD1/wYABQADAAIAAAD1/wcABQADAAMAAAD8////BQAAAAEAAAD8/wAABQAAAAIAAAD8/wEABQAAAAMAAAD9//7/BQABAAAAAAD9////BQABAAEAAAD9/wAABQABAAIAAAD9/wEABQABAAMAAAD9/wIABQABAAQAAAD+//7/BQACAAAAAAD+////BQACAAEAAAD+/wAABQACAAIAAAD+/wEABQACAAMAAAD+/wIABQACAAQAAAD/////BQADAAEAAAD//wAABQADAAIAAAD//wEABQADAAMAAADx//z/BQAAAAEAAADx//3/BQAAAAIAAADx//7/BQAAAAMAAADy//v/BQABAAAAAADy//z/BQABAAEAAADy//3/BQABAAIAAADy//7/BQABAAMAAADy////BQABAAQAAADz//v/BQACAAAAAADz//z/BQACAAEAAADz//3/BQACAAIAAADz//7/BQACAAMAAADz////BQACAAQAAAD0//z/BQADAAEAAAD0//3/BQADAAIAAAD0//7/BQADAAMAAAD7/wQABQAAAAEAAAD7/wUABQAAAAIAAAD7/wYABQAAAAMAAAD8/wMABQABAAAAAAD8/wQABQABAAEAAAD8/wUABQABAAIAAAD8/wYABQABAAMAAAD8/wcABQABAAQAAAD9/wMABQACAAAAAAD9/wQABQACAAEAAAD9/wUABQACAAIAAAD9/wYABQACAAMAAAD9/wcABQACAAQAAAD+/wQABQADAAEAAAD+/wUABQADAAIAAAD+/wYABQADAAMAAADy/wIABgAAAAEAAADy/wMABgAAAAIAAADz/wIABgABAAEAAADz/wMABgABAAIAAAD4/wUABgADAAAAAAD3/wUABgACAAAAAAD3/wYABgACAAEAAAD3/wcABgACAAIAAAD4/wYABgADAAEAAAD4/wcABgADAAIAAAADAAYABgACAAAAAAADAAcABgACAAEAAAADAAgABgACAAIAAAAEAAYABgADAAAAAAAEAAcABgADAAEAAAAEAAgABgADAAIAAAD4/wQABwAAAAcAAAD5/wQABwABAAcAAAD6//j/BwACAAgAAAAEAPv/BwAEAAQAAAAEAPz/BwAEAAUAAAAEAP3/BwAEAAYAAAAEAP//BwAEAAQAAAAEAAAABwAEAAUAAAAEAAEABwAEAAYAAAALAP//BwAEAAQAAAALAAAABwAEAAUAAAALAAEABwAEAAYAAAALAPv/BwAEAAQAAAALAPz/BwAEAAUAAAALAP3/BwAEAAYAAAD5//f/BwADAAAAAAD+//j/BwACAAgAAAD6//H/BAAAAAAAAAD6//L/BAAAAAEAAAD6//P/BAAAAAIAAAD6//T/BAAAAAMAAAD6//X/BAAAAAQAAAD6//b/BAAAAAUAAAD6//f/BAAAAAYAAAD7//H/BAABAAAAAAD7//L/BAABAAEAAAD7//P/BAABAAIAAAD7//T/BAABAAMAAAD7//X/BAABAAQAAAD7//b/BAABAAUAAAD7//f/BAABAAYAAAD8//H/BAACAAAAAAD8//L/BAACAAEAAAD8//P/BAACAAIAAAD8//X/BAACAAQAAAD8//b/BAACAAUAAAD8//f/BAACAAYAAAD9//H/BAADAAAAAAD9//L/BAADAAEAAAD9//P/BAADAAIAAAD9//T/BAADAAMAAAD9//X/BAADAAQAAAD9//b/BAADAAUAAAD9//f/BAADAAYAAAD+//H/BAAEAAAAAAD+//L/BAAEAAEAAAD+//P/BAAEAAIAAAD+//T/BAAEAAMAAAD+//X/BAAEAAQAAAD+//b/BAAEAAUAAAD+//f/BAAEAAYAAAA=")
 tile_set = SubResource("TileSet_w4aw6")
@@ -2322,9 +2327,6 @@ tile_set = SubResource("TileSet_w4aw6")
 [node name="Player" parent="." instance=ExtResource("2_8e0tq")]
 z_index = 3
 position = Vector2(407, 286)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -2370,11 +2372,41 @@ script = ExtResource("27_vxglm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 sprite_frames = SubResource("SpriteFrames_tel4y")
 animation = &"cenoura"
-frame = 3
-frame_progress = 0.466874
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_2f3dj")
 
+[node name="Informacoes" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="Informacoes"]
+offset_top = 2.0
+offset_right = 97.0
+offset_bottom = 25.0
+label_settings = SubResource("LabelSettings_vxglm")
+
+[node name="Area2D2" type="Area2D" parent="."]
+z_index = 2
+position = Vector2(394, 215)
+monitorable = false
+script = ExtResource("28_2f3dj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(4, 16)
+shape = SubResource("RectangleShape2D_yq6so")
+
+[node name="Label2" type="Label" parent="Area2D2"]
+visible = false
+z_index = 2
+offset_top = -37.0
+offset_right = 9.0
+offset_bottom = -14.0
+text = "E"
+label_settings = SubResource("LabelSettings_vxglm")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_body_exited"]
+
+[editable path="Player"]
