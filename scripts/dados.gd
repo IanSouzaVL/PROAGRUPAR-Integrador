@@ -6,6 +6,9 @@ var chave = false
 var posicaoPlayer
 var residencial = false
 
+var animation_player: AnimationPlayer
+var currentTimePos
+
 var pontuacao = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

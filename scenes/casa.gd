@@ -11,12 +11,15 @@ func _process(_delta: float) -> void:
 	if (podeInteragir == true) and Input.is_action_just_pressed("interact"):
 		Dados.residencial = true
 		Dados.posicaoPlayer = $"../Player".position
+		
+		Dados.animation_player = $"../AnimationPlayer"
+		Dados.currentTimePos = Dados.animation_player.current_animation
 		var resultado = get_tree().change_scene_to_file("res://scenes/mundo_2.tscn")
 		if resultado != OK:
 			push_error("Falha ao trocar de cena. Código de erro: %s" % resultado)
 	if (Dados.chave == true):
 		Dados.chave = false
-		$"../Player".position = Dados.posicaoPlayer
+		Dados.animation_player.current_animation = Dados.currentTimePos
 	print(Dados.residencial)
 	
 

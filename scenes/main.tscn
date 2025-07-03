@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://buymqdf2atssw"]
+[gd_scene load_steps=58 format=4 uid="uid://buymqdf2atssw"]
 
 [ext_resource type="Texture2D" uid="uid://duy3ls7avg3ix" path="res://assets/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="1_r5r7r"]
 [ext_resource type="Script" uid="uid://b5deqewpdn0er" path="res://scenes/main.gd" id="1_tel4y"]
@@ -2253,6 +2253,43 @@ sources/21 = SubResource("TileSetAtlasSource_l0myf")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq6so"]
 
+[sub_resource type="Animation" id="Animation_yq6so"]
+resource_name = "daycicle"
+length = 500.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Luz:self_modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20, 38, 60, 120, 180, 242, 280, 300),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.74902), Color(0.207843, 0.0666667, 0, 0.811765), Color(0.392157, 0.152941, 0, 0.623529), Color(0.392157, 0.152941, 0, 0), Color(0.392157, 0.152941, 0, 0), Color(0.392157, 0.152941, 0, 0), Color(0.392157, 0.152941, 0, 0), Color(0.207843, 0.0666667, 0, 0.811765), Color(0, 0, 0, 0.74902)]
+}
+
+[sub_resource type="Animation" id="Animation_fv21b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Luz:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tel4y"]
+_data = {
+&"RESET": SubResource("Animation_fv21b"),
+&"daycicle": SubResource("Animation_yq6so")
+}
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_tel4y")
 
@@ -2382,6 +2419,12 @@ offset_bottom = 23.0
 stream = ExtResource("30_fv21b")
 autoplay = true
 parameters/looping = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tel4y")
+}
+autoplay = "daycicle"
 
 [connection signal="body_entered" from="PortaDaCasa" to="PortaDaCasa" method="_on_body_entered"]
 [connection signal="body_exited" from="PortaDaCasa" to="PortaDaCasa" method="_on_body_exited"]
