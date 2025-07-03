@@ -2298,6 +2298,13 @@ passby_press = true
 action = "up"
 visibility_mode = 1
 
+[node name="interact" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(1036, 441)
+texture_normal = ExtResource("3_qedy4")
+passby_press = true
+action = "interact"
+visibility_mode = 1
+
 [node name="ui_right" type="TouchScreenButton" parent="CanvasLayer"]
 position = Vector2(176, 470)
 texture_normal = ExtResource("4_5ejro")
@@ -2360,7 +2367,7 @@ text = "F"
 label_settings = SubResource("LabelSettings_vxglm")
 
 [node name="Luz" type="ColorRect" parent="."]
-self_modulate = Color(0.654621, 0.302815, 0.0337021, -0.300812)
+self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 offset_left = -1537.0
 offset_top = -1060.0

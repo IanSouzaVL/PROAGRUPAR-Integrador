@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("interact") and isInsideM == true):
 		if (Dados.pontuacao < 50):
 			$PanelContainer/Label.text = str("Opa jovem... agente precisa de 50 centavos. \n faz o seguinte, planta \n 50 cenouras que eu te pago.")
@@ -46,14 +46,14 @@ func _process(delta: float) -> void:
 					$"../AudioStreamPlayer".stream = load("res://assets/sounds/LENGO TENGO.mp3")
 					$"../AudioStreamPlayer".play()
 				
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	label.show()
 	isInsideM = true
 	
 	pass # Replace with function body.
 
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(_body: Node2D) -> void:
 	label.hide()
 	isInsideM = false
 	pass # Replace with function body.

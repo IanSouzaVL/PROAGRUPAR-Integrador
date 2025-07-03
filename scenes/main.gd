@@ -2,7 +2,7 @@ extends Node2D
 var node = preload("res://scenes/cenoura.tscn")
 @onready var player = $Player
 @onready var tilemap = $"Layer 0/Layer 1"
-var cenoura = preload("res://scenes/cenoura.tscn")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
