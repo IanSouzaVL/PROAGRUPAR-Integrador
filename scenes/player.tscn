@@ -403,10 +403,11 @@ scale = Vector2(0.9, 0.9)
 script = ExtResource("1_miq13")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 9)
+position = Vector2(-0.222223, 4.33333)
 shape = SubResource("RectangleShape2D_71bmu")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.222223, -4.66667)
 sprite_frames = SubResource("SpriteFrames_o0jrm")
 animation = &"idle_down"
 

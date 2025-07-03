@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6qhkd2rma5ok"
+path="res://.godot/imported/Pagode Russo.mp3-fd60160db726999a6892fb8d60e87c70.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Pagode Russo.mp3"
+dest_files=["res://.godot/imported/Pagode Russo.mp3-fd60160db726999a6892fb8d60e87c70.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

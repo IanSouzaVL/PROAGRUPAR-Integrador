@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bt0v7js1e2xmf"
+path="res://.godot/imported/Alceu Valença - De Teresina a São Luis.mp3-5cb5e368a555a82eb8478163e1f60abc.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Alceu Valença - De Teresina a São Luis.mp3"
+dest_files=["res://.godot/imported/Alceu Valença - De Teresina a São Luis.mp3-5cb5e368a555a82eb8478163e1f60abc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
